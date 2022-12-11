@@ -23,17 +23,24 @@ const SquareScreen = () => {
         value={blue}
         setValue={(value) => setBlue(value)}
       />
-      <View
-        style={{
-          height: 100,
-          width: 100,
-          backgroundColor: `rgb(${red}, ${green}, ${blue})`,
-        }}
-      />
+      <View style={styles.colorSquare}>
+        <View
+          style={{
+            height: 100,
+            width: 100,
+            backgroundColor: `rgb(${red}, ${green}, ${blue})`,
+          }}
+        />
+      </View>
     </View>
   );
 };
 
 export default SquareScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  colorSquare: {
+    marginVertical: 20,
+    alignItems: "center",
+  },
+});

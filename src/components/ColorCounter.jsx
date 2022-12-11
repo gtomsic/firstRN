@@ -3,15 +3,15 @@ import React from "react";
 
 const ColorCounter = ({ color, value, setValue }) => {
   const increaseValue = () => {
-    if (value + 10 > 255) return;
-    setValue(value + 10);
+    if (value + 15 > 255) return;
+    setValue(value + 15);
   };
   const decreaseValue = () => {
-    if (value - 10 < 0) return;
-    setValue(value + 10);
+    if (value - 15 < 0) return;
+    setValue(value - 15);
   };
   return (
-    <View>
+    <View style={styles.container}>
       <Text>{color}</Text>
       <Button onPress={increaseValue} title={`Increase ${color}`} />
       <Button onPress={decreaseValue} title={`Decrease ${color}`} />
@@ -21,4 +21,4 @@ const ColorCounter = ({ color, value, setValue }) => {
 
 export default ColorCounter;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({ container: { marginHorizontal: 20 } });
